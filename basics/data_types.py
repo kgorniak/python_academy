@@ -50,8 +50,21 @@ print(str(i_bool))
 
 car = {"name": "audi",
        "year": 2008,
-       "seats": 5.0,
+       "seats": 5,
+       "engine": 2.0,
        "ABS": True,
        "equipment": ("engine", "wheels", "seats"),
        "additional equipment": ["brakes", "mirrors", ]}
 print(car)
+
+######################################
+
+hobby = "sleeping"
+print("I like " + hobby + " a lot")
+print("I like {} a lot".format(hobby))    #interpolacja
+print(f"I like {hobby} a lot\n")     #f-strings
+
+print(f"My car is {car['name']}. Year of production: {car['year']}.")
+print("My car is {}.".format(car['name']))
+print("My car has " + str(car['seats']) + " places.")
+
