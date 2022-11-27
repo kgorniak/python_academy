@@ -7,7 +7,7 @@ for number in isbn:
 control_num = suma % 11
 print(isbn + f"-{control_num}")
 
-############### drugie rozwiązanie
+############### second solution
 
 total_sum = 0
 for i in range(len(isbn)):
