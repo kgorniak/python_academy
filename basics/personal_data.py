@@ -4,8 +4,15 @@ records = personal_data.split()
 dict = {}
 
 print(records)
-for data in records:
-    data = data.split(":")
-    dict[data[0]] = data[1]
+# for data in records:
+#     data = data.split(":")
+#     dict[data[0]] = data[1]
+#
+# print(dict)
+
+
+for record in records:
+    key, value = record.split(":")
+    dict[key] = value
 
 print(dict)
