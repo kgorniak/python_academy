@@ -56,14 +56,3 @@ for i in rucksacks_list:
 group_list.append(group)
 # print(group_list)
 
-
-
-
-
-badges_list = []
-test_l = ['WwcsbsWwspmFTGVV', 'RHtMDHdSMnDBGMSDvnvDjtmpTpjTFggpmjmTFggTjmpP', 'vtCSGRMBDzHddvBHBzRhrlcZhlLzWNlqblhzcr']
-
-for letter in test_l[0]:
-    if letter in test_l[0] and letter in test_l[1] and letter in test_l[-1]:
-        badges_list.append(letter)
-print(badges_list)

@@ -31,11 +31,12 @@ class Travel(Person):
                 self.passport_dict[country] += 1
 
 
-traveler = Travel("andrzej", "testowy", year_of_birth=1991, distance=501)
-print(f"Cost of travel = {traveler.calculate_cost()}")
+if __name__ == "__main__":
+    traveler = Travel("andrzej", "testowy", year_of_birth=1991, distance=501)
+    print(f"Cost of travel = {traveler.calculate_cost()}")
 
-print(traveler.passport)
-traveler.passport = ["Poland", "Germany", "Spain"]
-print(traveler.passport)
-traveler.passport = ["Poland", "Germany", "Spain", "England", "Spain"]
-print(traveler.passport)
+    print(traveler.passport)
+    traveler.passport = ["Poland", "Germany", "Spain"]
+    print(traveler.passport)
+    traveler.passport = ["Poland", "Germany", "Spain", "England", "Spain"]
+    print(traveler.passport)
