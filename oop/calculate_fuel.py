@@ -8,4 +8,4 @@ def calculate_fuel(mass):
     return needed_fuel
 
 
-print(calculate_fuel(14))
+# print(calculate_fuel(14))
