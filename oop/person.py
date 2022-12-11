@@ -3,17 +3,17 @@ from datetime import date
 
 class Person:
 
-    def __init__(self, name, surname, year_of_birth):
+    def __init__(self, name: str, surname: str, year_of_birth: int):
         self.name = name
         self.surname = surname
-        self.year_of_birth = year_of_birth
+        self.__year_of_birth = year_of_birth
 
     def print_full_name(self):
         print(self.name, self.surname)
 
-    def return_age(self):
+    def return_age(self) -> int:
         current_year = date.today().year
-        return current_year - self.year_of_birth
+        return current_year - self.__year_of_birth
 
     def change_surname(self, new_surname):
         self.surname = new_surname
@@ -21,27 +21,29 @@ class Person:
 
 class Employee(Person):
 
-    def __init__(self, name, surname, year_of_birth, type_of_employment):
+    def __init__(self, name: str, surname: str, year_of_birth: int, type_of_employment: str):
         super().__init__(name, surname, year_of_birth)
         self.type_of_employment = type_of_employment
 
-    def change_employment_type(self, new_type):
+    def change_employment_type(self, new_type: str):
         self.type_of_employment = new_type
 
 
 class Student(Person):
 
-    def __init__(self, name, surname, year_of_birth, student_id, initial_grades=None):
+    def __init__(self, name: str, surname: str, year_of_birth: int, student_id: str, initial_grades=None):
         super().__init__(name, surname, year_of_birth)
         if initial_grades is None:
             initial_grades = []
         self.initial_grades = initial_grades
         self._student_id = student_id
 
-    def add_grade(self, grade):
+    def add_grade(self, grade: int):
+        if type(grade) is not int:
+            return False
         self.initial_grades.append(grade)
 
-    def calculate_final_grade(self):
+    def calculate_final_grade(self) -> float:
         final_grade = round(sum(self.initial_grades) / len(self.initial_grades))
         return final_grade
 
@@ -69,7 +71,6 @@ if __name__ == "__main__":
     print(f"(protected) ID: {student.student_id}")
     student.student_id = "#987"
     print(f"ID after change: {student.student_id}")
-
 
     # andrzej_programmer = Employee("Andrzej", "Programmer", 1999, "B2B")
     # andrzej_programmer.print_full_name()

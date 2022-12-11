@@ -1,4 +1,4 @@
-from person import Person
+from oop.person import Person
 from math import ceil
 
 
@@ -32,7 +32,7 @@ class Travel(Person):
 
 
 if __name__ == "__main__":
-    traveler = Travel("andrzej", "testowy", year_of_birth=1991, distance=501)
+    traveler = Travel("andrzej", "testowy", year_of_birth=2000, distance=9999)
     print(f"Cost of travel = {traveler.calculate_cost()}")
 
     print(traveler.passport)

@@ -49,10 +49,22 @@ group_list = []
 for i in rucksacks_list:
     if len(group) == 3:
         group_list.append(group)
-        group = []
-        group.append(i)
+        group = [i]
     else:
         group.append(i)
 group_list.append(group)
 # print(group_list)
 
+badges_list = []
+for group in group_list:
+    for letter in group[0]:
+        if letter in group[0] and letter in group[1] and letter in group[-1]:
+            badges_list.append(letter)
+            break
+
+# print(badges_list)
+sum_of_priorities_badges = 0
+for badge in badges_list:
+    if badge in dict_upper_case.keys():
+        sum_of_priorities_badges += dict_upper_case[badge]
+print(f"Second part answer: {sum_of_priorities_badges}")
