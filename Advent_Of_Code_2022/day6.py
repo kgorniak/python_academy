@@ -23,6 +23,3 @@ with open("day6_input.txt", "r") as file:
     # get_four_characters(0, 4)
     if compare_chars(get_four_characters(0, 4)):
         print("True")
-
-
-
