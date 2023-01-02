@@ -9,7 +9,7 @@ class PokemonTests(unittest.TestCase):
         self.api_handler = APIHandler()
 
     def test_default_pokemons(self):
-        response = requests.get(self.url + self.pokemon_endpoint)
+        response = requests.get(self.api_handler.url + self.api_handler.pokemon_endpoint)
         response_body = response.json()
         size = len(response.content) / 1000
         roundtrip = response.elapsed.total_seconds() * 1000
