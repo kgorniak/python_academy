@@ -2,8 +2,8 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
-from ui_tests.pages.login import LoginPage
-from ui_tests.pages.home import HomePage
+from ui_tests.tests_exercise.pages.login import LoginPage
+from ui_tests.tests_exercise.pages.home import HomePage
 
 
 class MyTestCase(unittest.TestCase):

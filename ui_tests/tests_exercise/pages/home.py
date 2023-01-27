@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common import NoSuchElementException, TimeoutException
 
-from ui_tests.pages.base import BasePage
+from ui_tests.tests_exercise.pages.base import BasePage
 import random
 
 

@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as EC    # noqa
 
 
 class MyTestCase(unittest.TestCase):
@@ -15,7 +15,13 @@ class MyTestCase(unittest.TestCase):
     search_product_button_selector = (By.XPATH, "//*[@id='submit_search']")
 
     def setUp(self) -> None:
-        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
+        desired_capabilities = {
+            "browserName": "chrome"
+        }
+
+        self.driver = webdriver.Remote("http://192.168.1.13:4444", desired_capabilities=desired_capabilities)
+        # self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         self.driver.get("https://automationexercise.com/")
         self.driver.implicitly_wait(5)
 

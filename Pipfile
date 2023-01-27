@@ -8,6 +8,9 @@ selenium = "*"
 requests = "*"
 faker = "*"
 webdriver-manager = "*"
+pytest = "*"
+pytest-xdist = "*"
+behave = "*"
 
 [dev-packages]
 

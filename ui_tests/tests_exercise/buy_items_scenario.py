@@ -3,14 +3,14 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
-from ui_tests.pages.cart import CartPage
-from ui_tests.pages.checkout import CheckoutPage
-from ui_tests.pages.login import LoginPage
-from ui_tests.pages.home import HomePage
+from ui_tests.tests_exercise.pages.cart import CartPage
+from ui_tests.tests_exercise.pages.checkout import CheckoutPage
+from ui_tests.tests_exercise.pages.login import LoginPage
+from ui_tests.tests_exercise.pages.home import HomePage
 
 from selenium.webdriver.common.by import By
 
-from ui_tests.pages.products import ProductsPage
+from ui_tests.tests_exercise.pages.products import ProductsPage
 
 
 class MyTestCase(unittest.TestCase):
