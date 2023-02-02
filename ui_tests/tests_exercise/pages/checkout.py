@@ -19,5 +19,5 @@ class CheckoutPage(BasePage):
     def get_total_price(self):
         prices_elements = self.driver.find_elements(*self.cart_total_price_selector)
         cart_total_sum = prices_elements[-1]
-        sum_int = int(cart_total_sum.text.split()[1])
-        return sum_int
+        total = int(cart_total_sum.text.split()[1])
+        return total
