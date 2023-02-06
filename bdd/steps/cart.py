@@ -28,7 +28,12 @@ def step_impl(context):
     context.cart_page.check_if_login_modal_visible()
 
 
-@then("I calculate value of cart")
+@then("I check value of cart")
 def step_impl(context):
-    """Calculate if sum of items equals total sum of cart"""
+    """Check if sum of items equals total sum of cart"""
     assert sum(context.checkout_page.get_items_prices()) == context.checkout_page.get_total_price()
+
+
+@step("I remove all items from cart")
+def step_impl(context):
+    context.cart_page.remove_all_items_from_cart()

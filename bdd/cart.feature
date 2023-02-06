@@ -8,7 +8,7 @@ Feature: Cart
     When I add 2 items of unicorn to the cart
     And I navigate to cart
     And I proceed to checkout
-    Then I calculate value of cart
+    Then I check value of cart
 
   @unlogged
   Scenario: Check empty cart
@@ -40,3 +40,10 @@ Feature: Cart
 
   @smoke @unlogged
   Scenario: Removing all items from cart
+    Given I'm logged out
+    When I add 5 items of unicorn to the cart
+    When I add 3 items of dress to the cart
+    And I navigate to cart
+    And I remove all items from cart
+    Then I see empty cart
+

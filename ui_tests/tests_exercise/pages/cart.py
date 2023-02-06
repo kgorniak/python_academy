@@ -12,6 +12,7 @@ class CartPage(BasePage):
     checkout_button_selector = (By.CLASS_NAME, "check_out")
     empty_cart_selector = (By.ID, "empty_cart")
     close_checkout_modal_selector = (By.CLASS_NAME, "close-checkout-modal")
+    delete_item_button_selector = (By.CLASS_NAME, "cart_quantity_delete")
 
     def navigate_to_cart(self):
         self.driver.find_element(*self.cart_tab_selector).click()
@@ -31,3 +32,8 @@ class CartPage(BasePage):
                 EC.visibility_of_element_located(self.close_checkout_modal_selector))
         except TimeoutException:
             return False
+
+    def remove_all_items_from_cart(self):
+        delete_buttons = self.driver.find_elements(*self.delete_item_button_selector)
+        for button in delete_buttons:
+            button.click()
