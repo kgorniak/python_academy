@@ -1,25 +1,31 @@
 # task description: https://adventofcode.com/2022/day/6
-four_char_list = []
+
+# part 1
+
+def compare_chars(list):
+    if len(list) == len(set(list)):
+        return True
 
 
-def get_four_characters(start, end):
-
-    for counter in range(start, end):
-        four_char_list.append(read_file[counter])
-    print(four_char_list)
-    return four_char_list
-
-
-def compare_chars(chars_list):
-    for index in range(len(chars_list)):
-        if chars_list[index] == chars_list[index + 1]:
-            return False
-        else:
-            return True
+def get_four_chars(list, start, end):
+    chars_list = list[start:end]
+    return chars_list
 
 
 with open("day6_input.txt", "r") as file:
     read_file = file.readline()
-    # get_four_characters(0, 4)
-    if compare_chars(get_four_characters(0, 4)):
-        print("True")
+    print(read_file)
+
+    start = 0
+    end = 4
+    for index, item in enumerate(read_file):
+        four_list = get_four_chars(read_file, start, end)
+        if compare_chars(four_list):
+            print(four_list, index + 4)
+            break
+        else:
+            start += 1
+            end += 1
+
+# part 2
+# just change in lines 20 and 24 for '14' instead of '4'

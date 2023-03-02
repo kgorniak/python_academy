@@ -11,6 +11,11 @@ webdriver-manager = "*"
 pytest = "*"
 pytest-xdist = "*"
 behave = "*"
+appium-python-client = "*"
+locust = "*"
+nose2 = "*"
+allure-nose2 = "*"
+allure-behave = "*"
 
 [dev-packages]
 
