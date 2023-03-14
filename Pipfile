@@ -16,6 +16,7 @@ locust = "*"
 nose2 = "*"
 allure-nose2 = "*"
 allure-behave = "*"
+python-dateutil = "*"
 
 [dev-packages]
 

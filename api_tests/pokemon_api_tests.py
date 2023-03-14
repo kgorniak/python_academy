@@ -14,7 +14,7 @@ class PokemonTests(unittest.TestCase):
         size = len(response.content) / 1000
         roundtrip = response.elapsed.total_seconds() * 1000
 
-        self.assertEqual(1154, response_body["count"])
+        self.assertEqual(1281, response_body["count"])
         self.assertTrue(response_body)
         self.assertEqual(200, response.status_code)
         self.assertTrue(1000 > roundtrip)

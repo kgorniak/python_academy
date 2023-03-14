@@ -2,7 +2,6 @@ from datetime import date
 
 
 class Person:
-
     def __init__(self, name: str, surname: str, year_of_birth: int):
         self.name = name
         self.surname = surname
@@ -20,8 +19,9 @@ class Person:
 
 
 class Employee(Person):
-
-    def __init__(self, name: str, surname: str, year_of_birth: int, type_of_employment: str):
+    def __init__(
+        self, name: str, surname: str, year_of_birth: int, type_of_employment: str
+    ):
         super().__init__(name, surname, year_of_birth)
         self.type_of_employment = type_of_employment
 
@@ -30,8 +30,14 @@ class Employee(Person):
 
 
 class Student(Person):
-
-    def __init__(self, name: str, surname: str, year_of_birth: int, student_id: str, initial_grades=None):
+    def __init__(
+        self,
+        name: str,
+        surname: str,
+        year_of_birth: int,
+        student_id: str,
+        initial_grades=None,
+    ):
         super().__init__(name, surname, year_of_birth)
         if initial_grades is None:
             initial_grades = []

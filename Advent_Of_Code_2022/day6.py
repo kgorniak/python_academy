@@ -14,7 +14,7 @@ def get_four_chars(list, start, end):
 
 with open("day6_input.txt", "r") as file:
     read_file = file.readline()
-    print(read_file)
+    # print(read_file)
 
     start = 0
     end = 4

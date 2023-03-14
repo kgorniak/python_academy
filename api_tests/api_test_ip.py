@@ -1,6 +1,6 @@
 import unittest
 import requests
-import api_tests
+# import api_tests
 
 
 class ApiTestIP(unittest.TestCase):
