@@ -21,7 +21,7 @@ elif destination == "Reykjavik":
     cost = 2 * distances[destination]
     if distances[destination] > 2000:
         cost += 100
-    print(f"Travel cost to {destination} is: {cost}")
+    print(f"The travel cost to {destination} is: {cost}")
 elif destination == "Gdansk":
     cost = 2 * distances[destination]
     if distances[destination] > 2000:
